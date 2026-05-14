@@ -1069,37 +1069,44 @@
     }
 
     .bk {
-      background: #fff;
+      background: var(--navy);
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, .08);
-      border: 1px solid rgba(200, 168, 75, .1);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, .2);
+      border: 1px solid rgba(255, 255, 255, .08);
       display: flex;
       flex-direction: column;
-      transition: transform .28s var(--ease), box-shadow .28s;
+      transition: transform .28s var(--ease), box-shadow .28s, border-color .28s;
     }
 
     .bk:hover {
       transform: translateY(-5px);
-      box-shadow: 0 14px 38px rgba(0, 0, 0, .13)
+      box-shadow: 0 14px 38px rgba(0, 0, 0, .3);
+      border-color: rgba(200, 168, 75, 0.3);
     }
 
-    /* Book cover — landscape crop, not too tall */
+    /* Book cover — contain to show full spread */
     .bk-cover {
       width: 100%;
-      height: 160px;
-      /* fixed pixel height — compact */
+      height: 220px;
+      /* increased height for better visibility */
       overflow: hidden;
       flex-shrink: 0;
       position: relative;
+      background: rgba(0, 0, 0, 0.2);
+      /* darker background for contain */
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .bk-cover img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: center top;
+      object-fit: contain;
+      /* ensure full visibility */
       transition: transform .42s var(--ease);
+      padding: 10px;
     }
 
     .bk:hover .bk-cover img {
@@ -1125,16 +1132,16 @@
 
     .bk-body h3 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: .95rem;
-      color: var(--navy);
+      font-size: 1.1rem;
+      color: #fff;
       line-height: 1.32;
       font-weight: 700
     }
 
     .bk-body p {
-      font-size: .76rem;
-      color: var(--slate);
-      line-height: 1.58;
+      font-size: .78rem;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.62;
       flex: 1
     }
 
@@ -2063,6 +2070,91 @@
     </div>
   </section>
 
+  <!-- ══ BOOKS ══ -->
+  <section id="books" class="sec">
+    <div class="rv">
+      <div class="kicker lt">Published Works</div>
+      <h2 class="sh lt">Author of <em>Science Books</em></h2>
+    </div>
+    <div class="books-grid">
+      <!-- NEPALI MEDIUM -->
+      <!-- Book 1: Class 8 Nepali -->
+      <div class="bk rv">
+        <div class="bk-cover">
+          <img src="images/book9.jpg" alt="Science and Technology Class 8 Nepali" loading="lazy" />
+        </div>
+        <div class="bk-body">
+          <span class="bk-class">Class 8 · Nepali Medium</span>
+          <h3>सरल विज्ञान तथा प्रविधि</h3>
+          <p>Manual and Practice Book for Class 8 students. Based on the new CDC curriculum.</p>
+          <a href="https://forms.gle/An4Ta4a6kqsoMSPU6" class="bk-lnk" target="_blank">Buy Now →</a>
+        </div>
+      </div>
+      <!-- Book 2: Class 9 Nepali -->
+      <div class="bk rv">
+        <div class="bk-cover">
+          <img src="images/book9.jpg" alt="Science and Technology Class 9 Nepali" loading="lazy" />
+        </div>
+        <div class="bk-body">
+          <span class="bk-class">Class 9 · Nepali Medium</span>
+          <h3>सरल विज्ञान तथा प्रविधि</h3>
+          <p>Comprehensive science manual for Grade 9 with simplified explanations and exercises.</p>
+          <a href="https://forms.gle/An4Ta4a6kqsoMSPU6" class="bk-lnk" target="_blank">Buy Now →</a>
+        </div>
+      </div>
+      <!-- Book 3: Class 10/SEE Nepali -->
+      <div class="bk rv">
+        <div class="bk-cover">
+          <img src="images/book10.jpg" alt="Science and Technology Class 10 SEE Nepali" loading="lazy" />
+        </div>
+        <div class="bk-body">
+          <span class="bk-class">Class 10/SEE · Nepali Medium</span>
+          <h3>सरल विज्ञान तथा प्रविधि</h3>
+          <p>Best-selling SEE preparation manual. Includes practice sets and model solutions.</p>
+          <a href="https://forms.gle/An4Ta4a6kqsoMSPU6" class="bk-lnk" target="_blank">Buy Now →</a>
+        </div>
+      </div>
+
+      <!-- ENGLISH MEDIUM -->
+      <!-- Book 4: Class 8 English -->
+      <div class="bk rv">
+        <div class="bk-cover">
+          <img src="images/book9.jpg" alt="Science and Technology Class 8 English" loading="lazy" />
+        </div>
+        <div class="bk-body">
+          <span class="bk-class">Class 8 · English Medium</span>
+          <h3>Science & Technology Manual</h3>
+          <p>English Medium edition for Grade 8, focusing on clear concepts and hands-on learning.</p>
+          <a href="https://forms.gle/An4Ta4a6kqsoMSPU6" class="bk-lnk" target="_blank">Buy Now →</a>
+        </div>
+      </div>
+      <!-- Book 5: Class 9 English -->
+      <div class="bk rv">
+        <div class="bk-cover">
+          <img src="images/book9.jpg" alt="Science and Technology Class 9 English" loading="lazy" />
+        </div>
+        <div class="bk-body">
+          <span class="bk-class">Class 9 · English Medium</span>
+          <h3>Science & Technology Manual</h3>
+          <p>Detailed manual for Grade 9 English Medium students with practice question sets.</p>
+          <a href="https://forms.gle/An4Ta4a6kqsoMSPU6" class="bk-lnk" target="_blank">Buy Now →</a>
+        </div>
+      </div>
+      <!-- Book 6: Class 10/SEE English -->
+      <div class="bk rv">
+        <div class="bk-cover">
+          <img src="images/book101.jpg" alt="Science and Technology Class 10 SEE English" loading="lazy" />
+        </div>
+        <div class="bk-body">
+          <span class="bk-class">Class 10/SEE · English Medium</span>
+          <h3>Science & Technology Master</h3>
+          <p>The ultimate English Medium guide for SEE success, featuring the latest exam patterns.</p>
+          <a href="https://forms.gle/An4Ta4a6kqsoMSPU6" class="bk-lnk" target="_blank">Buy Now →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ══ RESOURCES ══ -->
   <section id="resources" class="sec" style="background: #15161ab1">
     <div class="rv">
@@ -2309,11 +2401,8 @@
       const pad = (n) => n.toString().padStart(2, '0');
 
       const timeEN = `${pad(h12)}:${pad(mins)}:${pad(secs)} ${ampm}`;
-      const timeNP = `${toNepali(pad(hrs))}:${toNepali(pad(mins))}:${toNepali(pad(secs))}`;
 
       document.getElementById('live-clock').innerHTML = `
-        <span style="font-size:0.9em">${timeNP}</span>
-        <span style="opacity:0.3; font-weight:300">|</span>
         <span>${timeEN}</span>
       `;
     }
